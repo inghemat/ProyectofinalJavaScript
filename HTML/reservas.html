@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESERVAS</title>
+    <link rel="shortcut icon" href="../Imagenes/FAVICON.ico" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../CSS/estilo.css" />
+    <script>
+      function mostrar(id) {
+        var objeto = document.getElementById(id);
+        objeto.style.display = "block";
+      }
+      function ocultar(id) {
+        var objeto = document.getElementById(id);
+        objeto.style.display = "none";
+      }
+    </script>
+    <style>
+      .oculto {
+        display: none;
+      }
+    </style>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a
+        class="logo kuishi"
+        href="../index.html"
+        title="Kuishi Travel Agency - vive la experiencia, disfruta el proceso"
+        ><img
+          class="logoKuishi2"
+          src="../Imagenes/logo completo-04 (1).png"
+          alt="Kuishi Travel Agency - vive la experiencia, disfruta el proceso" /><img
+          class="logoKuishi2"
+          src="../Imagenes/Kuishi Colorizado Blanco.png"
+          alt="Kuishi Travel Agency - vive la experiencia, disfruta el proceso"
+      /></a>
+    </header>
+
+  <!-- MENU NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html"
+                >INICIO
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HTML/nosotros.html"
+                >SOBRE NOSOTROS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="./pagos.html"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >PAGOS</a
+              >
+              <div class="dropdown-menu pers">
+                <a class="dropdown-item" href="#">EFECTIVO</a>
+                <a class="dropdown-item" href="#">TRANSFERENCIA</a>
+                <a class="dropdown-item" href="./pagos.html"
+                  >LINK DE PAGO</a
+                >
+                <div class="dropdown-divider"></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HTML/reservas.html">RESERVAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="../HTML/contactenos.html"
+                >CONTACTENOS</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <input
+      class="reserV"
+      type="date"
+      value="2022-08-23"
+      min="2022-08-23"
+      max="2022-12-30"
+    />
+    <input class="reserV" type="date" value="" min="2022-08-24" max="date" />
+    
+
+    <input
+      type="button"
+      onclick="mostrar('contenido1') & ocultar('contenido2')"
+      value="CONSULTAR DISPONIBILIDAD"
+    />
+    <input
+      type="button"
+      onclick="mostrar('contenido2') & ocultar('contenido1')"
+      value="BUSCAR DE NUEVO"
+    />
+    <div class="spinner-border" id="contenido1" role="status">
+      <span class="visually-hidden" id="contenido1">Loading...</span>
+    </div>
+
+    <div class="cajaM" data-aos="flip-right" id="contenido2">
+      <h1>Los mejores resultados para tu experiencia</h1>
+      <p>Pon el mouse sobre este elemento</p>
+      <p>Despues dar clic en CONSULTAR DISPONIBILIDAD, Obedece !!!</p>
+      <p>Cuando te arrepientas - Clic en Buscar de Nuevo</p>
+    </div>
+
+    <div data-aos="fade-right">
+      <div class="cajaM2" id="contenido1">
+        <img src="../Imagenes/santaCatalina.jpg" alt="" hspace="5"/>
+        <br />
+        <p class="text-start">HOTEL SANTA CATALINA</p>
+        <p class="text-start">PRECIO: $ 500 USD</p>
+        <button class="alinB"><a href="">RESERVAR</a></button>
+      </div>
+    </div>
+
+    <div class="cajaM2" id="contenido1">
+      <img src="../Imagenes/Santa Teresa Hotel.jpg" alt="" hspace="5"/>
+      <br />
+      <p class="text-start">HOTEL SANTA TERESA</p>
+      <p class="text-start">PRECIO: $ 700 USD</p>
+      <button class="alinB"><a href="">RESERVAR</a></button>
+    </div>
+
+    <div class="cajaM2" id="contenido1">
+      <img src="../Imagenes/Cala Blanca.jpg" alt="" hspace="5"/>
+      <br />
+      <p class="text-start">HOTEL SOFITE CALA BLANCA</p>
+      <p class="text-start">PRECIO: $ 900 USD</p>
+      <button class="alinB"><a href="">RESERVAR</a></button>
+    </div>
+
+    <div class="bWP">
+      <a
+        href="https://api.whatsapp.com/send?phone=+573197098885&text=Quiero%20vivir%20la%20experiencia%20Kuishi"
+        target="_blank"
+        ><img
+        href=https://api.whatsapp.com/send?phone=+573197098885&text=Quiero%20vivir%20la%20experiencia%20Kuishi
+        src="../Imagenes/logoWhatsapp.png" alt="Whatsapp"></a
+      >
+    </div>
+
+    <footer class="foot">
+      <h4>&copy Sitio Web creado en la comision 33010 por Henry Matos</h4>
+      <h5>Alimentado por ideas de compañeros y el profe samu</h5>
+      <ul>
+        <li class="redes">
+          <a href="https://www.facebook.com/KuishiTraveAgency/" target="_blank"
+            ><img src="../Imagenes/LogoFaceFooter.webp" alt="Fanpage"
+          /></a>
+        </li>
+        <li class="redes">
+          <a
+            href="https://instagram.com/chicuelastore_ctg?igshid=YmMyMTA2M2Y"
+            target="_blank"
+            ><img
+              src="../Imagenes/logoInstagram-removebg-preview.png"
+              alt="Fanpage"
+          /></a>
+        </li>
+        <li class="redes">
+          <a
+            href="https://instagram.com/chicuelastore_ctg?igshid=YmMyMTA2M2Y"
+            target="_blank"
+            ><img src="../Imagenes/LogoYoutube.png" alt="Fanpage"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
